@@ -6,11 +6,11 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:02:55 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 14:03:24 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:46:48 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

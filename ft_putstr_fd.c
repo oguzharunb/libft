@@ -6,13 +6,14 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:02:30 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 14:15:27 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:45:02 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	ft_write(fd, s, ft_strlen(s));
+	write(fd, s, ft_strlen(s));
 }

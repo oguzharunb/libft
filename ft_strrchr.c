@@ -6,11 +6,11 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:11:02 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 14:12:35 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:48:41 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

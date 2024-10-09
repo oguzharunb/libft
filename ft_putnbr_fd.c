@@ -6,11 +6,12 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:36:32 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 14:04:57 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:44:34 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

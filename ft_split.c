@@ -6,11 +6,12 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:53:09 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 13:59:28 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:46:26 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	ft_countwords(char const *s, char c)
 {
@@ -55,6 +56,6 @@ char	**ft_split(char const *s, char c)
 			s += word_len;
 		}
 	}
-	lst[word] = '\0';
+	lst[word] = NULL;
 	return (lst);
 }

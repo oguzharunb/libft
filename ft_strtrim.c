@@ -6,11 +6,12 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:11:54 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 14:12:30 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:49:12 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

@@ -6,11 +6,12 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:32:44 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 13:33:08 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:44:20 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

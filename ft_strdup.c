@@ -6,11 +6,12 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:00:25 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 14:15:33 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/09 14:47:48 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {
