@@ -6,7 +6,7 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:46:47 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/10 17:19:19 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/10 17:30:30 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int	ft_atoi(const char *nptr)
 			return (-1);
 		if (ret > 2147483648 && sign == -1)
 			return (0);
+		if (ret == 2147483648 && sign == 1)
+			return (-2147483648);
 		ret *= 10;
 		ret += nptr[i] - '0';
 		i++;
