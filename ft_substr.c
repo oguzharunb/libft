@@ -6,11 +6,10 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:12:58 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 14:49:26 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/10 20:09:28 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

@@ -6,11 +6,10 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:57:22 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 13:15:46 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/10 20:08:28 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdlib.h>
 
 static size_t	get_digits(int n)

@@ -6,11 +6,10 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:48:09 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/10 17:16:04 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/10 20:08:18 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdlib.h>
 
 void	*ft_calloc(size_t nelem, size_t elsize)
