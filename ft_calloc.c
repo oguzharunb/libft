@@ -6,7 +6,7 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:48:09 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 14:43:36 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/10 17:16:04 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 
 	i = 0;
 	total_bytes = nelem * elsize;
+	if (total_bytes == 0)
+		return (NULL);
 	allocated = malloc(total_bytes);
 	if (allocated == NULL)
 		return (NULL);
