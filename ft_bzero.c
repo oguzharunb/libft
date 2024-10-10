@@ -6,7 +6,7 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:47:35 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 12:49:00 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/10 17:37:33 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	while (--n > 0)
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
-		((char *)s)[n] = 0;
+		((char *)s)[i] = 0;
+		i++;
 	}
-	*(char *)s = 0;
 }
