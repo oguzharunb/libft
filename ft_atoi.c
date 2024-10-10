@@ -6,7 +6,7 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:46:47 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 13:37:52 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/10 17:00:56 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *nptr)
 {
 	size_t	i;
 	char	sign;
-	int		ret;
+	long	ret;
 
 	ret = 0;
 	i = 0;
@@ -31,6 +31,8 @@ int	ft_atoi(const char *nptr)
 	}
 	while ((nptr[i] >= '0' || nptr[i] <= '9') && nptr[i])
 	{
+		if (ret > 2147483647 && sign == 1)
+			return (-1);
 		ret *= 10;
 		ret += nptr[i] - '0';
 		i++;
