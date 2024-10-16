@@ -15,8 +15,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	char	*new;
+	register size_t	i;
+	char			*new;
 
 	new = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!new)

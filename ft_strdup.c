@@ -15,9 +15,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t	slen;
-	size_t	i;
-	char	*allocated;
+	size_t			slen;
+	register size_t	i;
+	char			*allocated;
 
 	slen = ft_strlen(s);
 	allocated = malloc(sizeof(char) * (slen + 1));
