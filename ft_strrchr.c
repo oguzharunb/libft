@@ -14,9 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
-	size_t	slen;
-	char	*temp_s;
+	register size_t	i;
+	size_t			slen;
+	char			*temp_s;
 
 	temp_s = (char *)s;
 	slen = ft_strlen(temp_s);

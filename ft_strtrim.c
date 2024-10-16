@@ -15,17 +15,15 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	s1_len;
-	size_t	i;
-	size_t	final_size;
-	char	*final_string;
+	size_t			s1_len;
+	register size_t	i;
+	size_t			final_size;
+	char			*final_string;
 
 	i = 0;
 	s1_len = ft_strlen(s1);
 	while (i < s1_len && ft_isin(s1[i], set))
-	{
 		i++;
-	}
 	s1_len--;
 	while (i <= s1_len && ft_isin(s1[s1_len], set))
 	{
