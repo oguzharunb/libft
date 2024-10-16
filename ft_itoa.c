@@ -14,7 +14,7 @@
 
 static size_t	get_digits(int n)
 {
-	size_t	i;
+	register size_t	i;
 
 	i = 0;
 	while (n)
