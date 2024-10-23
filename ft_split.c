@@ -13,6 +13,19 @@
 #include "libft.h"
 #include <stdlib.h>
 
+static void		ft_cleanlist(char const **list, size_t index)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < index)
+	{
+		free(list[i]);
+		i++;
+	}
+	free(list);
+}
+
 static size_t	ft_countwords(char const *s, char c)
 {
 	size_t	count;
@@ -52,7 +65,13 @@ char	**ft_split(char const *s, char c)
 				word_len = ft_strlen(s);
 			else
 				word_len = ft_strchr(s, c) - s;
-			lst[word++] = ft_substr(s, 0, word_len);
+			lst[word] = ft_substr(s, 0, word_len);
+			if (!lst[word])
+			{
+				ft_cleanlist(lst, word);
+				return (NULL);
+			}
+			word++;
 			s += word_len;
 		}
 	}
