@@ -14,14 +14,16 @@
 
 int	ft_atoi(const char *nptr)
 {
-	register int		i;
-	register int		ret;
-	char				sign;
+	register int	i;
+	register int	ret;
+	char			sign;
 
+	if (!nptr)
+		return (NULL);
 	ret = 0;
 	i = 0;
 	sign = 1;
-	while ((nptr[i] == ' ' || nptr[i] == '\t') && nptr[i])
+	while (nptr[i] == ' ' || nptr[i] == '\t')
 		i++;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{
