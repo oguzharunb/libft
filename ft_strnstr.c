@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:58:43 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/24 14:42:06 by obastug          ###   ########.fr       */
+/*   Created: 2024/10/24 14:20:01 by obastug           #+#    #+#             */
+/*   Updated: 2024/10/24 14:37:43 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 {
-	register size_t	i;
-	char			*temp_s;
 
-	temp_s = (char *)s;
-	i = 0;
-	while (temp_s[i])
-	{
-		if (temp_s[i] == c)
-			return (temp_s + i);
-		i++;
-	}
-	if (temp_s[i] == c)
-		return (temp_s + i);
-	return (NULL);
 }

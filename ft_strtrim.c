@@ -13,6 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
+__attribute__((nonnull(1, 2)))
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t			s1_len;
@@ -26,10 +27,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	s1_len--;
 	while (i <= s1_len && ft_isin(s1[s1_len], set))
-	{
 		s1_len--;
-	}
-	final_size = (sizeof(char) * (s1_len - i + 2));
+	final_size = sizeof(char) * (s1_len - i + 2);
 	final_string = malloc(final_size);
 	if (!final_string)
 		return (NULL);

@@ -13,68 +13,95 @@
 #include "libft.h"
 #include <stdlib.h>
 
-static void		ft_cleanlist(char const **list, size_t index)
+static void	ft_free(char **str)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < index)
+	while (str[i])
 	{
-		free(list[i]);
-		i++;
+		free(str[i++]);
 	}
-	free(list);
+	free(str);
 }
 
-static size_t	ft_countwords(char const *s, char c)
+static size_t	ft_count_words(char const *s, char c)
 {
-	size_t	count;
+	size_t	i;
+	int		on_word;
 
-	if (!*s)
-		return (0);
-	count = 0;
+	i = 0;
+	on_word = 0;
 	while (*s)
 	{
-		while (*s == c)
-			s++;
+		if (*s != c && !on_word)
+		{
+			on_word = 1;
+			i++;
+		}
+		else if (*s == c && on_word)
+			on_word = 0;
+		s++;
+	}
+	return (i);
+}
+
+static char	*ft_word_dup(const char *s, size_t size)
+{
+	char	*dup;
+	size_t	i;
+
+	dup = malloc(sizeof(char) * size + 1);
+	if (!dup)
+		return (NULL);
+	i = 0;
+	while (i < size)
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
+}
+
+static int	ft_split_words(char **split, const char *s, char c)
+{
+	const char	*p;
+	size_t		i;
+
+	i = 0;
+	while (*s)
+	{
+		if (*s != c)
+		{
+			p = s;
+			while (*s && *s != c)
+				s++;
+			split[i] = ft_word_dup(p, s - p);
+			if (!(split[i]))
+			{
+				ft_free(split);
+				return (0);
+			}
+			i++;
+		}
 		if (*s)
-			count++;
-		while (*s != c && *s)
 			s++;
 	}
-	return (count);
+	split[i] = NULL;
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char		**lst;
-	size_t		word_len;
-	int			word;
+	char	**split;
 
-	lst = (char **)malloc((ft_countwords(s, c) + 1) * sizeof(char *));
-	if (!s || !lst)
+	if (!s)
 		return (NULL);
-	word = 0;
-	while (*s)
-	{
-		while (*s == c && *s)
-			s++;
-		if (*s)
-		{
-			if (!ft_strchr(s, c))
-				word_len = ft_strlen(s);
-			else
-				word_len = ft_strchr(s, c) - s;
-			lst[word] = ft_substr(s, 0, word_len);
-			if (!lst[word])
-			{
-				ft_cleanlist(lst, word);
-				return (NULL);
-			}
-			word++;
-			s += word_len;
-		}
-	}
-	lst[word] = NULL;
-	return (lst);
+	split = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (!split)
+		return (NULL);
+	if (!ft_split_words(split, s, c))
+		return (NULL);
+	return (split);
 }

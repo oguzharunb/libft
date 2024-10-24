@@ -18,12 +18,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*ptr2;
 	register size_t	i;
 
-	if (!dest || !src)
-		return (NULL);
 	ptr1 = (unsigned char *)dest;
 	ptr2 = (unsigned char *)src;
-	i = -1;
-	while (++i < n)
+	i = 0;
+	while (i < n)
+	{
 		ptr1[i] = ptr2[i];
+		i++;
+	}
 	return (ptr1);
 }

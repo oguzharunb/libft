@@ -18,12 +18,11 @@ int	ft_atoi(const char *nptr)
 	register int	ret;
 	char			sign;
 
-	if (!nptr)
-		return (NULL);
 	ret = 0;
 	i = 0;
 	sign = 1;
-	while (nptr[i] == ' ' || nptr[i] == '\t')
+	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\v'
+		|| nptr[i] == '\f' || nptr[i] == '\n' || nptr[i] == '\r')
 		i++;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{

@@ -20,10 +20,8 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 
 	i = 0;
 	total_bytes = nelem * elsize;
-	if (total_bytes == 0)
-		return (NULL);
 	allocated = malloc(total_bytes);
-	if (allocated == NULL)
+	if (!allocated)
 		return (NULL);
 	while (i < nelem * elsize)
 	{

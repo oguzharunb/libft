@@ -11,21 +11,16 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-static void	loop(t_list *lst, void (*del)(void *))
+__attribute__((nonnull(1, 2)))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if (!lst || !del)
-		return ;
-	if (lst->next)
-		loop(lst->next, del);
-	del(lst->content);
-	free(lst);
-}
+	t_list	*tmp;
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
-{
-	if (!lst || !del)
-		return ;
-	loop(*lst, del);
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:08:52 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 14:15:05 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/24 14:38:10 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	tmp1 = (unsigned char *)s1;
 	tmp2 = (unsigned char *)s2;
 	i = 0;
-	while (i < n)
+	while (i < n && s1[i] && s2[i])
 	{
-		if (tmp1[i] == tmp2[i] && tmp1[i])
-			i++;
-		return (tmp1[i] == tmp2[i]);
+		if (tmp1[i] != tmp2[i])
+			return (tmp1[i] - tmp2[i]);
+		i++;
 	}
 	return (0);
 }
-	
