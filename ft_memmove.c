@@ -6,13 +6,13 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:30:19 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/24 14:35:26 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/24 15:27:10 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-__attribute__((nonnull(1)))
+__attribute__((nonnull(1, 2)))
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	register size_t	i;

@@ -6,7 +6,7 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:11:02 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/09 14:48:41 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/24 15:40:34 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,22 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	register size_t	i;
-	size_t			slen;
-	char			*temp_s;
+	char	*ptr;
+	char	*ret;
 
-	temp_s = (char *)s;
-	slen = ft_strlen(temp_s);
-	i = 0;
-	while (i < slen + 1)
+	if (c == 0)
+		return ((char *)s + ft_strlen(s));
+	ret = (void *)0;
+	ptr = (char *)s;
+	while (*ptr)
 	{
-		if (temp_s[slen - i] == c)
-			return (temp_s + slen - i);
-		i++;
+		ptr = ft_memchr(ptr, c, ft_strlen(ptr) + 1);
+		if (!ptr)
+			return (ret);
+		ret = ptr;
+		ptr++;
 	}
-	return (NULL);
+	if (ret)
+		return (ret);
+	return ((void *)0);
 }

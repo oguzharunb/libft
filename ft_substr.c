@@ -6,7 +6,7 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:12:58 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/10 20:09:28 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/24 15:12:10 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,24 @@
 __attribute__((nonnull(1)))
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	register size_t	i;
-	char			*allocated;
-	size_t			slen;
+	size_t	count;
+	size_t	size;
+	char	*tab;
 
-	slen = ft_strlen(s);
-	allocated = malloc(sizeof(char) * (len + 1));
-	if (!allocated)
+	if ((unsigned int)ft_strlen(s) < start)
+		return (ft_strdup(""));
+	size = ft_strlen(s + start);
+	if (size < len)
+		len = size;
+	tab = (char *)malloc((len + 1) * sizeof(char));
+	if (!tab)
 		return (NULL);
-	i = 0;
-	while (i < len && s[start + i] && i < slen)
+	count = 0;
+	while (count < len)
 	{
-		allocated[i] = s[start + i];
-		i++;
+		tab[count] = s[start + count];
+		count++;
 	}
-	allocated[i] = '\0';
-	return (allocated);
+	tab[count] = '\0';
+	return (tab);
 }

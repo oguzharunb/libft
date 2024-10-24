@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:29:53 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/24 15:16:55 by obastug          ###   ########.fr       */
+/*   Created: 2024/10/24 15:37:06 by obastug           #+#    #+#             */
+/*   Updated: 2024/10/24 15:37:13 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-__attribute__((nonnull(1, 2)))
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
-	register size_t	i;
+	unsigned int	i;
 
-	ptr1 = (unsigned char *)dest;
-	ptr2 = (unsigned char *)src;
+	if (!s || !f)
+		return ;
 	i = 0;
-	while (i < n)
+	while (s[i])
 	{
-		ptr1[i] = ptr2[i];
+		f(i, s + i);
 		i++;
 	}
-	return (ptr1);
 }
