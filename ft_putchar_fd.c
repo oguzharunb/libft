@@ -6,12 +6,11 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:31:37 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/24 15:06:30 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/25 13:49:51 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <fcntl.h>
 
 void	ft_putchar_fd(char c, int fd)
 {
