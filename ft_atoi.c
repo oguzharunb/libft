@@ -6,7 +6,7 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:46:47 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/10 20:14:03 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/25 13:37:32 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *nptr)
 {
 	register int	i;
-	register int	ret;
+	register long	ret;
 	char			sign;
 
 	ret = 0;
@@ -35,5 +35,5 @@ int	ft_atoi(const char *nptr)
 		ret = (ret * 10) + (nptr[i] - '0');
 		i++;
 	}
-	return (ret * sign);
+	return ((int)ret * sign);
 }
