@@ -35,6 +35,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putptr_fd(unsigned long long n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 int		ft_atoi(const char *nptr);
 int		ft_isalnum(int c);
@@ -58,6 +59,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t dsize);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 int		ft_lstsize(t_list *lst);
 void	ft_lstprint(t_list *lst);

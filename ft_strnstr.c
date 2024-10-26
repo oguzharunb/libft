@@ -10,24 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 __attribute__((nonnull(1, 2)))
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *haystack, const char *little, size_t len)
 {
 	register size_t	i;
 	register size_t	j;
 	size_t			little_len;
+	char			*big;
 
+	big = (char *)haystack;
 	i = 0;
 	little_len = ft_strlen(little);
-	while (big[i])
+	if (little_len == 0)
+		return (big);
+	while (big[i] && i < len)
 	{
 		j = 0;
-		while (big[i + j] == little[j])
+		while (big[i + j] == little[j] && big[i + j]
+			&& little[j] && i + j < len)
 			j++;
-		if (j == len || j == little_len)
+		if (j == little_len)
 			return ((char *)big + i);
 		i++;
 	}
