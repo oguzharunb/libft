@@ -6,27 +6,24 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:30:19 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/24 15:27:10 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/28 11:16:14 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-__attribute__((nonnull(1, 2)))
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	register size_t	i;
-	char			*temp_dest;
-	const char		*temp_src;
 
-	temp_dest = (char *)dest;
-	temp_src = (const char *)src;
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
-	if (temp_dest >= temp_src)
+	if (dest >= src)
 	{
 		while (i < n)
 		{
-			temp_dest[n - i - 1] = temp_src[n - i - 1];
+			((char *)dest)[n - i - 1] = ((const char *)src)[n - i - 1];
 			i++;
 		}
 	}
@@ -34,7 +31,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (i < n)
 		{
-			temp_dest[i] = temp_src[i];
+			((char *)dest)[i] = ((const char *)src)[i];
 			i++;
 		}
 	}
