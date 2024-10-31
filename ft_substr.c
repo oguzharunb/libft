@@ -6,14 +6,13 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:12:58 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/24 15:12:10 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/31 15:38:39 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-__attribute__((nonnull(1)))
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	count;

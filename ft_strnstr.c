@@ -6,13 +6,12 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:20:01 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/24 14:51:45 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/31 15:38:27 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-__attribute__((nonnull(1, 2)))
 char	*ft_strnstr(const char *haystack, const char *little, size_t len)
 {
 	register size_t	i;

@@ -6,7 +6,7 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:11:54 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/24 15:09:07 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/31 15:38:35 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ static char	*empty_string(void)
 	return (str);
 }
 
-__attribute__((nonnull(1, 2)))
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;

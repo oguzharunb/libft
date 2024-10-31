@@ -6,11 +6,9 @@
 /*   By: obastug <obastug@42kocaeli.com.tr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:46:47 by obastug           #+#    #+#             */
-/*   Updated: 2024/10/25 13:37:32 by obastug          ###   ########.fr       */
+/*   Updated: 2024/10/31 15:38:08 by obastug          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stddef.h>
 
 int	ft_atoi(const char *nptr)
 {
